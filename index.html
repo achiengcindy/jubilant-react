@@ -19,11 +19,46 @@
     		)
     	}
 
+    	function TransportTable(props){
+    		return (
+    			<table>
+    				<tbody>
+    					<tr>
+    						<th>{props.titleYear}</th>
+    						<th>{props.titleModel}</th>
+                			<th>{props.titlePrice}</th>
+                			<th>{props.titleBuy}</th>
+    					</tr>
+    					<tr>
+    						<th>{props.Year}</th>
+    						<th>{props.Model}</th>
+                			<th>{props.Price}</th>
+                			<th><button>{props.Buy}</button></th>
+    					</tr>
+    				</tbody>
+    			</table>
+    		)
+    	}
+
+    	function TransportList(props){
+        return (
+            <div>
+                <h3>{props.title}</h3>
+                <ul>
+                    <TransportTable titleYear = "Year" titleModel= "Model" titlePrice= "Price" titleBuy ="Buy" />
+                </ul>
+            </div>
+        )
+    }
+
     	function TransportApp(props){
     		return (
-    			<div>
-    				<TransportTitle title = "Cindy Transport" sub_title = "online transport" />
-        		</div>
+    		<div>
+    			<TransportTitle title = "Cindy Transport" sub_title = "The best place to buy vehicles online" />
+    			<TransportList title = "Cars" Year="2013" Model="A" Price="32000" Buy="buy" />
+    			<TransportList title = "Trucks"/>
+    			<TransportList title = "Convertibles"/>
+        	</div>
     		)
     	}
 
@@ -36,7 +71,6 @@
 
 </body>
 </html>
-
 
 
 
