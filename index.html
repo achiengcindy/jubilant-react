@@ -9,23 +9,34 @@
 </head>
 <body>
     <div id="root"></div>
-
-
     <script type="text/babel">
+    	function TransportTitle(props){
+    		return (
+    			<div>
+        			<h1>{props.title}</h1>
+        			<p>{props.sub_title}</p>
+        		</div>
+    		)
+    	}
 
-        function CindyTransportation(props){
-        return <h1>{props.message}</h1>
-    }
+    	function TransportApp(props){
+    		return (
+    			<div>
+    				<TransportTitle title = "Cindy Transport" sub_title = "online transport" />
+        		</div>
+    		)
+    	}
 
-        ReactDOM.render(
-
-
-        <CindyTransportation message="Welcome to Cindy!"/>,
-        document.getElementById("root")
+    	ReactDOM.render(
+        	<TransportApp />,
+        	document.getElementById("root")
         )
     </script>
 
+
 </body>
 </html>
+
+
 
 
